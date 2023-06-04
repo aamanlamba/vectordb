@@ -39,7 +39,10 @@ if __name__ == "__main__":
     )
 
     qa = VectorDBQA.from_chain_type(
-        llm=OpenAI(), chain_type="stuff", vectorstore=docsearch,return_source_documents=True
+        llm=OpenAI(),
+        chain_type="stuff",
+        vectorstore=docsearch,
+        return_source_documents=True,
     )
     query = "what is a vector DB? Give me a 20 word answer for a beginner"
     result = qa({"query": query})
