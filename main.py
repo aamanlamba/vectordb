@@ -13,7 +13,7 @@ from langchain import OpenAI
 import pinecone
 
 pinecone.init(
-    api_key="30305c98-ca66-47e4-94db-5601639c7531", environment="us-west4-gcp-free"
+    api_key=os.environ.get("PINECONE_API_KEY"), environment=os.environ.get("PINECONE_ENVIRONMENT")
 )
 
 
